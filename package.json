@@ -1,0 +1,17 @@
+{
+  "name": "slink-maintenance-dropin",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Temporary maintenance page for Slink while waiting for upstream PHP updates; supports local, SMB or S3 image serving",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "@aws-sdk/client-s3": "^3.0.0",
+    "@awo00/smb2": "^1.1.1"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

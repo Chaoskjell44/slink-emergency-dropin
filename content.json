@@ -1,0 +1,15 @@
+{
+  "title": "Maintenance - slink.thecat.dev",
+  "domain": "slink.thecat.dev",
+  "h1_text": "Web UI offline.",
+  "lede_paragraph_1": "Due to a PHP vulnerability rated <strong class=\"critical\">CRITICAL</strong>, the Slink web interface has been taken offline as a precaution. Direct image links in the format <code>/image/IMAGE_HASH.ext</code> continue to be served. All other routes are disabled.",
+  "lede_paragraph_2": "The PHP security update was released on 21.10.2026.",
+  "lede_paragraph_3": "The Slink web interface will stay offline until the updated upstream image has been built, tested and deployed.",
+  "status_label": "Status",
+  "status_big": "PHP release available",
+  "timer_note": "Waiting for the updated Slink image. The interface will be re-enabled once it has been released and verified.",
+  "source_url": "https://www.php.net/archive/2026.php#2026-10-21-5",
+  "source_text": "View PHP release on php.net",
+  "foot_text": "Image hotlinks keep working. Uploads, login and the gallery are disabled.",
+  "accent_color": "#5539CC"
+}

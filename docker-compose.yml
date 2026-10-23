@@ -1,0 +1,20 @@
+services:
+  slink-dropin:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: slink-dropin
+    env_file:
+      - .env
+    ports:
+      - '3000:${PORT:-3000}'
+    volumes:
+      # Mount the original Slink image storage read-only so direct image links keep working.
+      # This is only needed when STORAGE_PROVIDER=local.
+      - ../slink/images:/app/images:ro
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "wget", "-qO-", "http://127.0.0.1:${PORT:-3000}/"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
